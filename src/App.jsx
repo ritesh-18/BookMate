@@ -10,7 +10,7 @@ const BookFinder = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Fetch books
+  // fetch books function
 const fetchBooks = async () => {
   if (!query.trim()) return;
   setLoading(true);
@@ -33,7 +33,7 @@ const fetchBooks = async () => {
     fetchBooks();
   }, []);
 
-  // Handle theme
+  // handle theme(useeffect)
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
@@ -65,7 +65,7 @@ const fetchBooks = async () => {
         theme === "dark" ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-800"
       }`}
     >
-      {/* Sidebar (mobile + desktop) */}
+      {/* sidebar (both for mobile + desktop)- responsivnes k liye */}
     <aside
   className={`fixed md:sticky z-20 top-0 left-0 w-64 md:w-1/4 h-full p-6 shadow-lg transform transition-transform duration-300 ease-in-out ${
     theme === "dark" ? "text-white bg-gray-900" : "bg-white dark:bg-gray-800"
@@ -82,7 +82,7 @@ const fetchBooks = async () => {
           </button>
         </div>
 
-        {/* Theme toggle */}
+        {/* this is for theme toggle */}
         <div className="flex justify-between mb-4">
           <span className="font-medium">Theme</span>
           <button
@@ -97,7 +97,7 @@ const fetchBooks = async () => {
           Hey Alex! Search books, explore details, and save your favorites.
         </p>
 
-        {/* Search Form */}
+        {/* here is the search Form */}
         <form onSubmit={handleSearch} className="mb-8">
           <input
             type="text"
@@ -118,7 +118,7 @@ const fetchBooks = async () => {
           </button>
         </form>
 
-        {/* Favorites Section */}
+        {/* adding features of favorites section */}
         <div className="overflow-y-auto max-h-60">
           <h3 className="text-lg font-semibold mb-3">❤️ Favorites</h3>
           {favorites.length === 0 ? (
@@ -138,7 +138,7 @@ const fetchBooks = async () => {
         </div>
       </aside>
 
-      {/* Overlay for mobile */}
+      {/* vverlay for mobile responsiveness */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-10 md:hidden"
@@ -146,9 +146,9 @@ const fetchBooks = async () => {
         />
       )}
 
-      {/* Main Content */}
+      {/* yaha se main content */}
       <main className="flex-1 overflow-y-auto p-4 md:p-6">
-        {/* Mobile Header */}
+        {/* mobile_header */}
         <div className="flex justify-between items-center mb-6 md:hidden">
           <button
             onClick={() => setSidebarOpen(true)}
