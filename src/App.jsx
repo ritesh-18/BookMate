@@ -11,19 +11,23 @@ const BookFinder = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Fetch books
-  const fetchBooks = async () => {
-    if (!query.trim()) return;
-    setLoading(true);
-    try {
-      const res = await fetch(`https://openlibrary.org/search.json?title=${query}`);
-      const data = await res.json();
-      setBooks(data.docs.slice(0, 20));
-    } catch (err) {
-      console.error("Error fetching books:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
+const fetchBooks = async () => {
+  if (!query.trim()) return;
+  setLoading(true);
+  try {
+    const res = await fetch(
+      `https://openlibrary.org/search.json?title=${encodeURIComponent(query)}`
+    );
+    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    const data = await res.json();
+    setBooks(data.docs.slice(0, 20));
+  } catch (err) {
+    console.error("Error fetching books:", err);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   useEffect(() => {
     fetchBooks();
