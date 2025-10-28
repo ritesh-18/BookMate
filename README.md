@@ -1,16 +1,58 @@
-# React + Vite
+# 📚 Book Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive React-based web application that allows users to **search for books**, **view book details**, and **save favorites** — all with a clean interface and optional **dark mode** support.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+-  **Book Search** — Search books by title using the [Open Library API](https://openlibrary.org/dev/docs/api/search).  
+- **Favorites Management** — Add or remove books from your favorites list.  
+- **Dark Mode** — Switch between light and dark themes easily.  
+- **Fully Responsive** — Works seamlessly across mobile, tablet, and desktop.  
+- **Built with Vite** for fast development and optimized builds.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category | Technology |
+|-----------|-------------|
+| Frontend Framework | [React.js](https://react.dev/) |
+| Styling | CSS / Tailwind CSS (optional) |
+| Build Tool | [Vite](https://vitejs.dev/) |
+| API | [Open Library API](https://openlibrary.org/developers/api) |
+
+---
+
+## 📂 Folder Structure
+
+```
+Book Finder/
+├── public/
+├── src/
+│ ├── components/
+│ │ └── Sidebar.jsx
+│ ├── App.jsx
+│ ├── index.css
+│ ├── main.jsx
+│ └── ...
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+```bash
+- clone https://github.com/yourusername/book-finder.git
+- cd book-finder
+
+- Install Dependencies : npm install
+- Run the development server : npm run dev 
+- Build for production: npm run build
+```
