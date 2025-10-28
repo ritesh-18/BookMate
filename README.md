@@ -49,7 +49,7 @@ Book Finder/
 
 ### 1. Clone the repository
 ```bash
-- clone https://github.com/yourusername/book-finder.git
+- clone https://github.com/Ritesh-18/BookMate.git
 - cd book-finder
 
 - Install Dependencies : npm install
