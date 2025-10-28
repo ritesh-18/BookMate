@@ -63,11 +63,10 @@ const BookFinder = () => {
     >
       {/* Sidebar (mobile + desktop) */}
     <aside
-  className={`fixed md:relative z-20 top-0 left-0 w-64 md:w-1/4 h-full p-6 shadow-lg transform transition-transform duration-300 ease-in-out ${
+  className={`fixed md:sticky z-20 top-0 left-0 w-64 md:w-1/4 h-full p-6 shadow-lg transform transition-transform duration-300 ease-in-out ${
     theme === "dark" ? "text-white bg-gray-900" : "bg-white dark:bg-gray-800"
-  } ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
+  } ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0 "}`}
 >
-
 
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">📚 BookMate</h2>
