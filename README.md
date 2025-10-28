@@ -31,8 +31,8 @@ A modern and responsive React-based web application that allows users to **searc
 Book Finder/
 ├── public/
 ├── src/
-│ ├── components/
-│ │ └── Sidebar.jsx
+│ 
+│ |── Sidebar.jsx
 │ ├── App.jsx
 │ ├── index.css
 │ ├── main.jsx
